@@ -1,4 +1,6 @@
 digraph G {
+  edge [fontsize=8]
+
   a [label="boot.js"]
   b_0 [label="owa-sync/index.js"]
   b_1 [label="owa-sync/core.js"]
@@ -6,18 +8,20 @@ digraph G {
   c_1 [label="owa-lazy/lazyIndex.js"]
   c_2 [label="owa-lazy/lazyComponent.js"]
   c_3 [label="owa-lazy/syncSelector.js"]
-  d_0 [label="owa-utils/index.js"]
 
   subgraph cluster_0 {
       label="boot"
+      bgcolor=lightgrey
       a -> b_0 -> b_1
-      a -> c_0 -> c_3 
-    //   c_3 -> d_0
+      a -> c_0
+    //   c_0 -> c_3 [label="&nbsp;Not used in boot"]
   }
 
   subgraph cluster_1 {
       label="async"
-      c_1 -> c_2 -> d_0
+      bgcolor=lightblue
+      c_1 -> c_2
+      c_2 -> c_3
   }
 
   c_0 -> c_1 [style=dashed]
