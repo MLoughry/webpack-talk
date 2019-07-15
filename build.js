@@ -1,7 +1,8 @@
 const { execSync } = require("child_process");
 const { resolve } = require("path");
 const { sync: glob } = require("glob");
-const { writeFileSync, readFileSync } = require("fs");
+const { sync: mkdirp } = require("mkdirp");
+const { writeFileSync, readFileSync, unlinkSync } = require("fs");
 const prettier = require("prettier");
 
 const { folder } = require("yargs").option("folder", {
@@ -43,37 +44,43 @@ function buildWebpack(mode = "production") {
 
 function copyProdFile(file) {
   const content = readFileSync(resolve(folder, "dist", file)).toString();
+  const destFolder = resolve(folder, "result", "production");
+
+  mkdirp(destFolder);
 
   // Copy unmodified file
-  writeFileSync(resolve(folder, "result", "production", file), content);
+  writeFileSync(resolve(destFolder, file), content);
 
   // Copy prettified file
   writeFileSync(
-    resolve(
-      folder,
-      "result",
-      "production",
-      file.replace(/\.js$/, "_formatted.js")
-    ),
+    resolve(destFolder, file.replace(/\.js$/, "_formatted.js")),
     prettier.format(content, { filepath: file })
   );
+
+  unlinkSync(resolve(folder, "dist", file));
 }
 
 function copyDevFile(file) {
   const content = readFileSync(resolve(folder, "dist", file)).toString();
+  const destFolder = resolve(folder, "result", "debug");
+
+  mkdirp(destFolder);
 
   // Copy unmodified file
-  writeFileSync(resolve(folder, "result", "debug", file), content);
+  writeFileSync(resolve(destFolder, file), content);
 
   // Copy prettified file
   writeFileSync(
-    resolve(folder, "result", "debug", file.replace(/\.js$/, "_annotated.js")),
+    resolve(destFolder, file.replace(/\.js$/, "_annotated.js")),
     prettier.format(
-        content
-            .replace(/eval\((".*")\);$/gm, (match, script) => JSON.parse(script))
-            .replace(/^\/\*+\//gm, '')
-        , { filepath: file })
+      content
+        .replace(/eval\((".*")\);$/gm, (match, script) => JSON.parse(script))
+        .replace(/^\/\*+\//gm, ""),
+      { filepath: file }
+    )
   );
+
+  unlinkSync(resolve(folder, "dist", file));
 }
 
 build();
