@@ -1,8 +1,11 @@
+const { resolve } = require('path');
+
 module.exports = {
-    entry: './src/index.js',
+    entry: require.resolve('./src/index.js'),
     output: {
         libraryTarget: 'global',
         library: ['fib'],
+        path: resolve(__dirname, 'dist')
     },
     target: 'node',
 }

@@ -100,12 +100,14 @@ global["fib"] = (function(modules) {
   __webpack_require__.p = "";
 
   // Load entry module and return exports
-  return __webpack_require__((__webpack_require__.s = "./src/index.js"));
+  return __webpack_require__(
+    (__webpack_require__.s = "./src/simple/src/index.js")
+  );
 })({
-  "./src/fibonacci.js":
-    /*!**************************!*\
-  !*** ./src/fibonacci.js ***!
-  \**************************/
+  "./src/simple/src/fibonacci.js":
+    /*!*************************************!*\
+  !*** ./src/simple/src/fibonacci.js ***!
+  \*************************************/
     /*! exports provided: fibonacci */
     function(module, __webpack_exports__, __webpack_require__) {
       "use strict";
@@ -125,14 +127,14 @@ global["fib"] = (function(modules) {
         }
       }
 
-      //# sourceURL=webpack:///./src/fibonacci.js?
+      //# sourceURL=webpack://fib/./src/simple/src/fibonacci.js?
     },
 
-  "./src/index.js":
-    /*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-    /*! no exports provided */
+  "./src/simple/src/index.js":
+    /*!*********************************!*\
+  !*** ./src/simple/src/index.js ***!
+  \*********************************/
+    /*! exports provided: main */
     function(module, __webpack_exports__, __webpack_require__) {
       "use strict";
       __webpack_require__.r(__webpack_exports__);
@@ -144,7 +146,7 @@ global["fib"] = (function(modules) {
         }
       );
       /* harmony import */ var _fibonacci__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-        /*! ./fibonacci */ "./src/fibonacci.js"
+        /*! ./fibonacci */ "./src/simple/src/fibonacci.js"
       );
 
       function main() {
@@ -153,6 +155,6 @@ global["fib"] = (function(modules) {
         );
       }
 
-      //# sourceURL=webpack:///./src/index.js?
+      //# sourceURL=webpack://fib/./src/simple/src/index.js?
     }
 });

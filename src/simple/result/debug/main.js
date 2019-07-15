@@ -1,4 +1,4 @@
-/******/ global["fib"] =
+global["fib"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -82,32 +82,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/simple/src/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/fibonacci.js":
-/*!**************************!*\
-  !*** ./src/fibonacci.js ***!
-  \**************************/
+/***/ "./src/simple/src/fibonacci.js":
+/*!*************************************!*\
+  !*** ./src/simple/src/fibonacci.js ***!
+  \*************************************/
 /*! exports provided: fibonacci */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"fibonacci\", function() { return fibonacci; });\nfunction fibonacci(n) {\r\n    if (n <= 1) {\r\n        return 1;\r\n    } else {\r\n        return fibonacci(n-1) + fibonacci(n-2);\r\n    }\r\n}\n\n//# sourceURL=webpack:///./src/fibonacci.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"fibonacci\", function() { return fibonacci; });\nfunction fibonacci(n) {\r\n    if (n <= 1) {\r\n        return 1;\r\n    } else {\r\n        return fibonacci(n-1) + fibonacci(n-2);\r\n    }\r\n}\n\n//# sourceURL=webpack://fib/./src/simple/src/fibonacci.js?");
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/simple/src/index.js":
+/*!*********************************!*\
+  !*** ./src/simple/src/index.js ***!
+  \*********************************/
 /*! exports provided: main */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"main\", function() { return main; });\n/* harmony import */ var _fibonacci__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fibonacci */ \"./src/fibonacci.js\");\n\r\n\r\nfunction main() {\r\n    console.log(Object(_fibonacci__WEBPACK_IMPORTED_MODULE_0__[\"fibonacci\"])(10));\r\n}\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"main\", function() { return main; });\n/* harmony import */ var _fibonacci__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fibonacci */ \"./src/simple/src/fibonacci.js\");\n\r\n\r\nfunction main() {\r\n    console.log(Object(_fibonacci__WEBPACK_IMPORTED_MODULE_0__[\"fibonacci\"])(10));\r\n}\n\n//# sourceURL=webpack://fib/./src/simple/src/index.js?");
 
 /***/ })
 

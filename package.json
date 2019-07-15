@@ -5,11 +5,14 @@
   "author": "Michael Loughry <miclo@microsoft.com>",
   "license": "MIT",
   "devDependencies": {
+    "glob": "^7.1.4",
     "prettier": "^1.18.2",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
+    "webpack-cli": "^3.3.6",
+    "yargs": "^13.2.4"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "webpack": "webpack"
   }
 }

@@ -1,11 +1,12 @@
-global["fib"] = (function(e) {
+global.fib = (function(e) {
   var t = {};
   function n(r) {
     if (t[r]) return t[r].exports;
     var o = (t[r] = { i: r, l: !1, exports: {} });
     return e[r].call(o.exports, o, o.exports, n), (o.l = !0), o.exports;
   }
-  (n.m = e),
+  return (
+    (n.m = e),
     (n.c = t),
     (n.d = function(e, t, r) {
       n.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r });
@@ -50,7 +51,8 @@ global["fib"] = (function(e) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
     (n.p = ""),
-    n((n.s = 0));
+    n((n.s = 0))
+  );
 })([
   function(e, t, n) {
     "use strict";
