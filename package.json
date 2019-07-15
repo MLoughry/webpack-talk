@@ -5,6 +5,7 @@
   "author": "Michael Loughry <miclo@microsoft.com>",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "^1.18.2",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
   },
