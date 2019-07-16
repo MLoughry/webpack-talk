@@ -1,0 +1,27 @@
+digraph G {
+  edge [fontsize=8]
+
+  c_1 [label="owa-lazy/lazyIndex.js",style=filled,fillcolor=lightblue]
+  c_2 [label="owa-lazy/lazyComponent.js",style=filled,fillcolor=lightblue]
+
+  subgraph cluster_0 {
+      label="boot"
+      bgcolor=lightgrey
+      a [label="boot.js",style=filled,fillcolor=lightgrey]
+      b_0 [label="owa-sync/index.js",style=filled,fillcolor=lightgrey]
+      b_1 [label="owa-sync/core.js",style=filled,fillcolor=lightgrey]
+      c_0 [label="owa-lazy/index.js",style=filled,fillcolor=lightgrey]
+      c_3 [label="owa-lazy/syncUtil.js",style=filled,fillcolor=lightgrey]
+  }
+
+  subgraph cluster_1 {
+      label="async"
+      bgcolor=lightblue
+  }
+
+  a -> b_0 -> b_1
+  a -> c_0
+  c_0 -> c_3
+  c_1 -> c_2 -> c_3
+  c_0 -> c_1 [style=dashed]
+}

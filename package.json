@@ -23,5 +23,8 @@
   "scripts": {
     "build": "webpack",
     "webpack": "webpack"
+  },
+  "dependencies": {
+    "open": "^6.4.0"
   }
 }
