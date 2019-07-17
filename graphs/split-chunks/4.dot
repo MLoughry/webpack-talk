@@ -23,7 +23,7 @@ digraph G {
       label="vendors~lazy1~lazy2\n(loaded simultaneously with lazy1 and lazy2)"
       labelloc=b
       bgcolor=lightgrey
-      c [label="someBigNodePackage.js"]
+      c [label="react.js"]
   }
 
   a -> b_0 [style=dashed]

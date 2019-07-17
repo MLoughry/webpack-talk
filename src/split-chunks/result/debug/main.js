@@ -115,20 +115,20 @@ global["fib"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/split-chunks/src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/split-chunks/src/boot.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/split-chunks/src/index.js":
-/*!***************************************!*\
-  !*** ./src/split-chunks/src/index.js ***!
-  \***************************************/
+/***/ "./src/split-chunks/src/boot.js":
+/*!**************************************!*\
+  !*** ./src/split-chunks/src/boot.js ***!
+  \**************************************/
 /*! exports provided: main */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"main\", function() { return main; });\nasync function main() {\r\n    await Promise.all(/*! import() | lazy1 */[__webpack_require__.e(\"vendors~lazy1~lazy2\"), __webpack_require__.e(\"lazy1\")]).then(__webpack_require__.bind(null, /*! ./lazy1 */ \"./src/split-chunks/src/lazy1/index.js\"));\r\n    await Promise.all(/*! import() | lazy2 */[__webpack_require__.e(\"vendors~lazy1~lazy2\"), __webpack_require__.e(\"lazy2\")]).then(__webpack_require__.bind(null, /*! ./lazy2 */ \"./src/split-chunks/src/lazy2/index.js\"));\r\n}\n\n//# sourceURL=webpack://fib/./src/split-chunks/src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"main\", function() { return main; });\nasync function main() {\r\n    await Promise.all(/*! import() | lazy1 */[__webpack_require__.e(\"vendors~lazy1~lazy2\"), __webpack_require__.e(\"lazy1\")]).then(__webpack_require__.bind(null, /*! ./lazy1 */ \"./src/split-chunks/src/lazy1/index.js\"));\r\n    await Promise.all(/*! import() | lazy2 */[__webpack_require__.e(\"vendors~lazy1~lazy2\"), __webpack_require__.e(\"lazy2\")]).then(__webpack_require__.bind(null, /*! ./lazy2 */ \"./src/split-chunks/src/lazy2/index.js\"));\r\n}\n\n//# sourceURL=webpack://fib/./src/split-chunks/src/boot.js?");
 
 /***/ })
 

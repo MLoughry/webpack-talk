@@ -141,13 +141,13 @@ global["fib"] = (function(modules) {
 
   // Load entry module and return exports
   return __webpack_require__(
-    (__webpack_require__.s = "./src/split-chunks/src/index.js")
+    (__webpack_require__.s = "./src/split-chunks/src/boot.js")
   );
 })({
-  "./src/split-chunks/src/index.js":
-    /*!***************************************!*\
-  !*** ./src/split-chunks/src/index.js ***!
-  \***************************************/
+  "./src/split-chunks/src/boot.js":
+    /*!**************************************!*\
+  !*** ./src/split-chunks/src/boot.js ***!
+  \**************************************/
     /*! exports provided: main */
     function(module, __webpack_exports__, __webpack_require__) {
       "use strict";
@@ -184,6 +184,6 @@ global["fib"] = (function(modules) {
         );
       }
 
-      //# sourceURL=webpack://fib/./src/split-chunks/src/index.js?
+      //# sourceURL=webpack://fib/./src/split-chunks/src/boot.js?
     }
 });

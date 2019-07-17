@@ -4,7 +4,7 @@ digraph G {
   a [label="boot.js"]
   b_0 [label="lazy1.js"]
   b_1 [label="lazy2.js"]
-  c [label="someBigNodePackage.js"]
+  c [label="react.js"]
   
 
   subgraph cluster_0 {
