@@ -6,6 +6,7 @@
   "license": "MIT",
   "devDependencies": {
     "@microsoft/loader-load-themed-styles": "^1.7.170",
+    "@types/react": "^16.8.23",
     "autoprefixer": "^9.6.1",
     "css-loader": "^3.0.0",
     "cssnano": "^4.1.10",
@@ -25,6 +26,7 @@
     "webpack": "webpack"
   },
   "dependencies": {
-    "open": "^6.4.0"
+    "open": "^6.4.0",
+    "react": "^16.8.6"
   }
 }

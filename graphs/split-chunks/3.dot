@@ -1,0 +1,30 @@
+digraph G {
+  edge [fontsize=8]
+
+  
+
+  subgraph cluster_0 {
+      label="boot"
+      bgcolor=lightgrey
+      a [label="boot.js"]
+  }
+
+  subgraph cluster_1 {
+      label="lazy1"
+      bgcolor=lightgrey
+      b_0 [label="lazy1.js"]
+  c_0 [label="someBigNodePackage.js"]
+  }
+
+  subgraph cluster_2 {
+      label="lazy2"
+      bgcolor=lightgrey
+      b_1 [label="lazy2.js"]
+  c_1 [label="someBigNodePackage.js"]
+  }
+
+  a -> b_0 [style=dashed]
+  a -> b_1 [style=dashed]
+  b_0 -> c_0
+  b_1 -> c_1
+}
