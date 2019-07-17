@@ -135,13 +135,13 @@ global["fib"] = (function(modules) {
 
   // Load entry module and return exports
   return __webpack_require__(
-    (__webpack_require__.s = "./src/simple-code-splitting/src/index.js")
+    (__webpack_require__.s = "./src/simple-code-splitting/src/boot.js")
   );
 })({
-  "./src/simple-code-splitting/src/index.js":
-    /*!************************************************!*\
-  !*** ./src/simple-code-splitting/src/index.js ***!
-  \************************************************/
+  "./src/simple-code-splitting/src/boot.js":
+    /*!***********************************************!*\
+  !*** ./src/simple-code-splitting/src/boot.js ***!
+  \***********************************************/
     /*! exports provided: main */
     function(module, __webpack_exports__, __webpack_require__) {
       "use strict";
@@ -153,18 +153,125 @@ global["fib"] = (function(modules) {
           return main;
         }
       );
+      /* harmony import */ var _owa_sync__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+        /*! ./owa-sync */ "./src/simple-code-splitting/src/owa-sync/index.js"
+      );
+      /* harmony import */ var _owa_lazy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+        /*! ./owa-lazy */ "./src/simple-code-splitting/src/owa-lazy/index.js"
+      );
+
       async function main() {
-        const { fibonacci } = await __webpack_require__
+        Object(_owa_sync__WEBPACK_IMPORTED_MODULE_0__["syncCore"])();
+
+        await Object(_owa_lazy__WEBPACK_IMPORTED_MODULE_1__["lazyComponent"])();
+      }
+
+      //# sourceURL=webpack://fib/./src/simple-code-splitting/src/boot.js?
+    },
+
+  "./src/simple-code-splitting/src/owa-lazy/index.js":
+    /*!*********************************************************!*\
+  !*** ./src/simple-code-splitting/src/owa-lazy/index.js ***!
+  \*********************************************************/
+    /*! exports provided: lazyComponent, syncUtil */
+    function(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */ __webpack_require__.d(
+        __webpack_exports__,
+        "lazyComponent",
+        function() {
+          return lazyComponent;
+        }
+      );
+      /* harmony import */ var _syncUtil__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+        /*! ./syncUtil */ "./src/simple-code-splitting/src/owa-lazy/syncUtil.js"
+      );
+      /* harmony reexport (safe) */ __webpack_require__.d(
+        __webpack_exports__,
+        "syncUtil",
+        function() {
+          return _syncUtil__WEBPACK_IMPORTED_MODULE_0__["syncUtil"];
+        }
+      );
+
+      const lazyComponent = () =>
+        __webpack_require__
           .e(/*! import() */ 0)
           .then(
             __webpack_require__.bind(
               null,
-              /*! ./fibonacci */ "./src/simple-code-splitting/src/fibonacci.js"
+              /*! ./lazyIndex */ "./src/simple-code-splitting/src/owa-lazy/lazyIndex.js"
             )
-          );
-        console.log(fibonacci(10));
+          )
+          .then(({ lazyComponent }) => lazyComponent());
+
+      //# sourceURL=webpack://fib/./src/simple-code-splitting/src/owa-lazy/index.js?
+    },
+
+  "./src/simple-code-splitting/src/owa-lazy/syncUtil.js":
+    /*!************************************************************!*\
+  !*** ./src/simple-code-splitting/src/owa-lazy/syncUtil.js ***!
+  \************************************************************/
+    /*! exports provided: syncUtil */
+    function(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */ __webpack_require__.d(
+        __webpack_exports__,
+        "syncUtil",
+        function() {
+          return syncUtil;
+        }
+      );
+      function syncUtil() {
+        console.log("I'm owa-lazy/syncUtil.js!");
       }
 
-      //# sourceURL=webpack://fib/./src/simple-code-splitting/src/index.js?
+      //# sourceURL=webpack://fib/./src/simple-code-splitting/src/owa-lazy/syncUtil.js?
+    },
+
+  "./src/simple-code-splitting/src/owa-sync/core.js":
+    /*!********************************************************!*\
+  !*** ./src/simple-code-splitting/src/owa-sync/core.js ***!
+  \********************************************************/
+    /*! exports provided: syncCore */
+    function(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */ __webpack_require__.d(
+        __webpack_exports__,
+        "syncCore",
+        function() {
+          return syncCore;
+        }
+      );
+      function syncCore() {
+        console.log("I'm owa-sync/core.js!");
+      }
+
+      //# sourceURL=webpack://fib/./src/simple-code-splitting/src/owa-sync/core.js?
+    },
+
+  "./src/simple-code-splitting/src/owa-sync/index.js":
+    /*!*********************************************************!*\
+  !*** ./src/simple-code-splitting/src/owa-sync/index.js ***!
+  \*********************************************************/
+    /*! exports provided: syncCore */
+    function(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+        /*! ./core */ "./src/simple-code-splitting/src/owa-sync/core.js"
+      );
+      /* harmony reexport (safe) */ __webpack_require__.d(
+        __webpack_exports__,
+        "syncCore",
+        function() {
+          return _core__WEBPACK_IMPORTED_MODULE_0__["syncCore"];
+        }
+      );
+
+      //# sourceURL=webpack://fib/./src/simple-code-splitting/src/owa-sync/index.js?
     }
 });

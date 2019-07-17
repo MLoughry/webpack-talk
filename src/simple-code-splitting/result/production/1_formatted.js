@@ -1,14 +1,14 @@
 (exports.ids = [1]),
-  (exports.modules = [
-    ,
-    function(n, t, r) {
+  (exports.modules = {
+    2: function(o, n, t) {
       "use strict";
-      function i(n) {
-        return n <= 1 ? 1 : i(n - 1) + i(n - 2);
+      t.r(n);
+      var e = t(0);
+      function s() {
+        Object(e.a)(), console.log("I'm owa-lazy/lazyComponent.js!");
       }
-      r.r(t),
-        r.d(t, "fibonacci", function() {
-          return i;
-        });
+      t.d(n, "lazyComponent", function() {
+        return s;
+      });
     }
-  ]);
+  });

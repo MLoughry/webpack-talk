@@ -1,1 +1,1 @@
-exports.ids=[1],exports.modules=[,function(n,t,r){"use strict";function i(n){return n<=1?1:i(n-1)+i(n-2)}r.r(t),r.d(t,"fibonacci",function(){return i})}];
+exports.ids=[1],exports.modules={2:function(o,n,t){"use strict";t.r(n);var e=t(0);function s(){Object(e.a)(),console.log("I'm owa-lazy/lazyComponent.js!")}t.d(n,"lazyComponent",function(){return s})}};

@@ -1,7 +1,7 @@
 const { resolve } = require('path');
 
 module.exports = {
-    entry: require.resolve('./src/index.js'),
+    entry: require.resolve('./src/boot.js'),
     output: {
         libraryTarget: 'global',
         library: ['fib'],
