@@ -1,1 +1,1 @@
-exports.ids=[1],exports.modules={2:function(o,n,t){"use strict";t.r(n);var e=t(0);function s(){Object(e.a)(),console.log("I'm owa-lazy/lazyComponent.js!")}t.d(n,"lazyComponent",function(){return s})}};
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{2:function(n,o,t){"use strict";t.r(o);var a=t(0);function c(){Object(a.a)(),console.log("I'm owa-lazy/lazyComponent.js!")}t.d(o,"lazyComponent",function(){return c})}}]);

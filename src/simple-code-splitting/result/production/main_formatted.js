@@ -1,97 +1,137 @@
-global.fib = (function(n) {
-  var e = {},
-    t = { 0: 0 };
-  function r(t) {
-    if (e[t]) return e[t].exports;
-    var o = (e[t] = { i: t, l: !1, exports: {} });
-    return n[t].call(o.exports, o, o.exports, r), (o.l = !0), o.exports;
+window.fib = (function(e) {
+  function n(n) {
+    for (var t, o, u = n[0], i = n[1], c = 0, l = []; c < u.length; c++)
+      (o = u[c]), r[o] && l.push(r[o][0]), (r[o] = 0);
+    for (t in i) Object.prototype.hasOwnProperty.call(i, t) && (e[t] = i[t]);
+    for (a && a(n); l.length; ) l.shift()();
   }
-  return (
-    (r.e = function(e) {
-      if (0 !== t[e]) {
-        var r = require("./" + ({}[e] || e) + ".js"),
-          o = r.modules,
-          u = r.ids;
-        for (var i in o) n[i] = o[i];
-        for (var c = 0; c < u.length; c++) t[u[c]] = 0;
+  var t = {},
+    r = { 0: 0 };
+  function o(n) {
+    if (t[n]) return t[n].exports;
+    var r = (t[n] = { i: n, l: !1, exports: {} });
+    return e[n].call(r.exports, r, r.exports, o), (r.l = !0), r.exports;
+  }
+  (o.e = function(e) {
+    var n = [],
+      t = r[e];
+    if (0 !== t)
+      if (t) n.push(t[2]);
+      else {
+        var u = new Promise(function(n, o) {
+          t = r[e] = [n, o];
+        });
+        n.push((t[2] = u));
+        var i,
+          c = document.createElement("script");
+        (c.charset = "utf-8"),
+          (c.timeout = 120),
+          o.nc && c.setAttribute("nonce", o.nc),
+          (c.src = (function(e) {
+            return o.p + "" + ({}[e] || e) + ".js";
+          })(e));
+        var a = new Error();
+        i = function(n) {
+          (c.onerror = c.onload = null), clearTimeout(l);
+          var t = r[e];
+          if (0 !== t) {
+            if (t) {
+              var o = n && ("load" === n.type ? "missing" : n.type),
+                u = n && n.target && n.target.src;
+              (a.message =
+                "Loading chunk " + e + " failed.\n(" + o + ": " + u + ")"),
+                (a.name = "ChunkLoadError"),
+                (a.type = o),
+                (a.request = u),
+                t[1](a);
+            }
+            r[e] = void 0;
+          }
+        };
+        var l = setTimeout(function() {
+          i({ type: "timeout", target: c });
+        }, 12e4);
+        (c.onerror = c.onload = i), document.head.appendChild(c);
       }
-      return Promise.all([]);
+    return Promise.all(n);
+  }),
+    (o.m = e),
+    (o.c = t),
+    (o.d = function(e, n, t) {
+      o.o(e, n) || Object.defineProperty(e, n, { enumerable: !0, get: t });
     }),
-    (r.m = n),
-    (r.c = e),
-    (r.d = function(n, e, t) {
-      r.o(n, e) || Object.defineProperty(n, e, { enumerable: !0, get: t });
-    }),
-    (r.r = function(n) {
+    (o.r = function(e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
-        Object.defineProperty(n, Symbol.toStringTag, { value: "Module" }),
-        Object.defineProperty(n, "__esModule", { value: !0 });
+        Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+        Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (r.t = function(n, e) {
-      if ((1 & e && (n = r(n)), 8 & e)) return n;
-      if (4 & e && "object" == typeof n && n && n.__esModule) return n;
+    (o.t = function(e, n) {
+      if ((1 & n && (e = o(e)), 8 & n)) return e;
+      if (4 & n && "object" == typeof e && e && e.__esModule) return e;
       var t = Object.create(null);
       if (
-        (r.r(t),
-        Object.defineProperty(t, "default", { enumerable: !0, value: n }),
-        2 & e && "string" != typeof n)
+        (o.r(t),
+        Object.defineProperty(t, "default", { enumerable: !0, value: e }),
+        2 & n && "string" != typeof e)
       )
-        for (var o in n)
-          r.d(
+        for (var r in e)
+          o.d(
             t,
-            o,
-            function(e) {
-              return n[e];
-            }.bind(null, o)
+            r,
+            function(n) {
+              return e[n];
+            }.bind(null, r)
           );
       return t;
     }),
-    (r.n = function(n) {
-      var e =
-        n && n.__esModule
+    (o.n = function(e) {
+      var n =
+        e && e.__esModule
           ? function() {
-              return n.default;
+              return e.default;
             }
           : function() {
-              return n;
+              return e;
             };
-      return r.d(e, "a", e), e;
+      return o.d(n, "a", n), n;
     }),
-    (r.o = function(n, e) {
-      return Object.prototype.hasOwnProperty.call(n, e);
+    (o.o = function(e, n) {
+      return Object.prototype.hasOwnProperty.call(e, n);
     }),
-    (r.p = ""),
-    (r.oe = function(n) {
-      process.nextTick(function() {
-        throw n;
-      });
-    }),
-    r((r.s = 1))
-  );
+    (o.p = ""),
+    (o.oe = function(e) {
+      throw (console.error(e), e);
+    });
+  var u = (window.webpackJsonp = window.webpackJsonp || []),
+    i = u.push.bind(u);
+  (u.push = n), (u = u.slice());
+  for (var c = 0; c < u.length; c++) n(u[c]);
+  var a = i;
+  return o((o.s = 1));
 })([
-  function(n, e, t) {
+  function(e, n, t) {
     "use strict";
     function r() {
       console.log("I'm owa-lazy/syncUtil.js!");
     }
-    t.d(e, "a", function() {
+    t.d(n, "a", function() {
       return r;
     });
   },
-  function(n, e, t) {
+  function(e, n, t) {
     "use strict";
-    t.r(e);
+    t.r(n);
     t(0);
     const r = () =>
       t
         .e(1)
         .then(t.bind(null, 2))
-        .then(({ lazyComponent: n }) => n());
+        .then(({ lazyComponent: e }) => e());
     async function o() {
       console.log("I'm owa-sync/core.js!"), await r();
     }
-    t.d(e, "main", function() {
+    t.d(n, "main", function() {
       return o;
     });
   }

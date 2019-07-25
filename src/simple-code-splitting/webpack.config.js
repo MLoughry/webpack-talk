@@ -7,5 +7,5 @@ module.exports = {
         library: ['fib'],
         path: resolve(__dirname, 'dist')
     },
-    target: 'node',
+    target: 'web',
 }

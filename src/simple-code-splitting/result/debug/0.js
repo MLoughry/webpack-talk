@@ -1,5 +1,4 @@
-exports.ids = [0];
-exports.modules = {
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
 /***/ "./src/simple-code-splitting/src/owa-lazy/lazyComponent.js":
 /*!*****************************************************************!*\
@@ -25,4 +24,4 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _laz
 
 /***/ })
 
-};;
+}]);
